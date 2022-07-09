@@ -3,6 +3,7 @@ let nombre: string[] = new Array(longitud);
 let edad: number[] = new Array(longitud);
 let altura: number[] = new Array(longitud);
 
+
 function cargarLongitudArreglos(longitudLocal: number) {
   longitudLocal = Number(prompt("ingrese la longitud del arreglo"));
   if (isNaN(longitudLocal)) {
@@ -27,6 +28,7 @@ function cargarVectores(
     v1[i] = String(prompt("ingrese el nombre de la persona"));
     v2[i] = Number(prompt("ingrese la edad"));
     v3[i] = Number(prompt("ingrese la altura (en cm)"));
+    
     console.log(
       "usted ingreso los siguientes datos en la posicion" + (i + 1),
       ":",
@@ -35,13 +37,11 @@ function cargarVectores(
       "Altura: " + v3[i]
     );
   }
-  nombre = v1;
-  edad = v2;
-  altura = v3;
+ 
 }
 
 function swap(array_1: any, i: number, j: number) {
-  let aux: number;
+  let aux: any;
   aux = array_1[i];
   array_1[i] = array_1[j];
   array_1[j] = aux;
@@ -50,10 +50,10 @@ function swap(array_1: any, i: number, j: number) {
 function bubbleSort(
   array_1: number[],
   array_2: number[],
-  array_3: any,
+  array_3: string,
   longitud: number
 ) {
-  let i, j: number;
+  let i:number, j: number;
   for (i = 0; i < longitud; i++) {
     for (j = 0; j < longitud - i; j++) {
       if (array_1[j] > array_1[j + 1]) {
